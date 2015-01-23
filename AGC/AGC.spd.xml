@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE softpkg PUBLIC "-//JTRS//DTD SCA V2.2.2 SPD//EN" "softpkg.dtd">
+<softpkg id="DCE:b012ca6f-4fdf-4f72-89d4-e075d8bb2d20" name="AGC" type="sca_compliant">
+  <title></title>
+  <author>
+    <name>null</name>
+  </author>
+  <propertyfile type="PRF">
+    <localfile name="AGC.prf.xml"/>
+  </propertyfile>
+  <descriptor>
+    <localfile name="AGC.scd.xml"/>
+  </descriptor>
+  <implementation id="cpp">
+    <description>The implementation contains descriptive information about the template for a software component.</description>
+    <code type="Executable">
+      <localfile name="cpp/AGC"/>
+      <entrypoint>cpp/AGC</entrypoint>
+    </code>
+    <compiler name="/usr/bin/gcc" version="4.1.2"/>
+    <programminglanguage name="C++"/>
+    <humanlanguage name="EN"/>
+    <os name="Linux"/>
+    <processor name="x86"/>
+    <processor name="x86_64"/>
+    <dependency type="allocation">
+      <softpkgref>
+        <localfile name="/deps/liquid_dsp_v1/liquid_dsp_v1.spd.xml"/>
+      </softpkgref>
+    </dependency>
+  </implementation>
+</softpkg>
